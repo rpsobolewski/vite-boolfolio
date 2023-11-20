@@ -3,8 +3,10 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "./views/Home.vue";
 import Contacts from "./views/Contacts.vue";
 
-const routes = [{ path: "/", component: Home }];
-const routes = [{ path: "/contacts", component: Contacts }];
+const routes = [
+  { path: "/", component: Home },
+  { path: "/contacts", component: Contacts },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),

@@ -1,5 +1,4 @@
 <template>
-    <h1>home</h1>
     <h1>Projects</h1>
     <div class="d-flex justify-content-center flex-wrap">
 
@@ -12,7 +11,7 @@
 
 <script>
 import axios from 'axios';
-import ProjectCard from '../components/ProjectCard.vue'; // Adjust the path based on your project structure
+import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
     components: {
