@@ -1,9 +1,9 @@
 <!-- App.vue -->
 <template>
   <h1>Projects</h1>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center flex-wrap">
 
-    <div class="col-2" v-for="project in projects.data" :key="project.id">
+    <div class="col-3" v-for="project in projects.data" :key="project.id">
       <ProjectCard :project="project" />
     </div>
 
