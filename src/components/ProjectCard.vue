@@ -1,18 +1,23 @@
-
+<!-- ProjectCard.vue -->
 <template>
     <div>
-        <h2>{{ project.title }}</h2>
-        <p>{{ project.description }}</p>
-        <img :src="project.thumb" alt="Project Thumbnail" style="max-width: 100%; height: auto;">
-        <p>Type: {{ project.type.name }}</p>
-        <p>Technologies:
-            <span v-for="technology in project.technologies" :key="technology.id">{{ technology.name }} </span>
-        </p>
-        <p>Link:
-            <a :href="project.link_project" target="_blank">Project</a>
-            <a v-if="project.link_github" :href="project.link_github" target="_blank">GitHub</a>
-        </p>
-        <p>Created At: {{ project.created_at }}</p>
+        <div class="card">
+            <img :src="project.thumb" class="card-img-top" alt="Project Thumbnail">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+                <p class="card-text"><small class="text-muted">Created At: {{ project.created_at }}</small></p>
+                <p class="card-text">Type: {{ project.type.name }}</p>
+                <p class="card-text">Technologies:
+                    <span v-for="technology in project.technologies" :key="technology.id">{{ technology.name }} </span>
+                </p>
+                <p class="card-text">Link:
+                    <a :href="project.link_project" target="_blank" class="btn btn-primary">Project</a>
+                    <a v-if="project.link_github" :href="project.link_github" target="_blank"
+                        class="btn btn-secondary">GitHub</a>
+                </p>
+            </div>
+        </div>
     </div>
 </template>
 

@@ -1,12 +1,12 @@
 <!-- App.vue -->
 <template>
-  <div>
-    <h1>Projects</h1>
-    <ul>
-      <li v-for="project in projects.data" :key="project.id">
-        <ProjectCard :project="project" />
-      </li>
-    </ul>
+  <h1>Projects</h1>
+  <div class="d-flex justify-content-center">
+
+    <div class="col-2" v-for="project in projects.data" :key="project.id">
+      <ProjectCard :project="project" />
+    </div>
+
   </div>
 </template>
 
