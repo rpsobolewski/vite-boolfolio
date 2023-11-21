@@ -1,11 +1,13 @@
 <template>
-    <h1>Projects</h1>
-    <div class="d-flex justify-content-center flex-wrap">
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="d-flex justify-content-center flex-wrap">
 
-        <div class="col-3" v-for="project in projects.data" :key="project.id">
-            <ProjectCard :project="project" />
+            <div class="col-3" v-for="project in projects.data" :key="project.id">
+                <ProjectCard :project="project" />
+            </div>
+
         </div>
-
     </div>
 </template>
 
